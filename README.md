@@ -11,7 +11,7 @@ Este plugin foi criado para facilitar a configuração do WebChat da plataforma 
 
 ### Passo 1: Baixar o Plugin
 
-Baixe o plugin diretamente do repositório ou do site oficial da [Vizyons Tecnologia](https://vizyons.com.br).
+Baixe o plugin clicando [AQUI](https://github.com/AndrielPrado/Plugin-WebChat/releases/download/v1.0.0/webchat_v1.0.0.zip).
 
 ### Passo 2: Upload para o WordPress
 
@@ -49,4 +49,3 @@ Se você deseja contribuir para este projeto, por favor, siga os passos abaixo:
 
 ## Licença
 
-Este projeto está licenciado sob a [Licença MIT](LICENSE).
