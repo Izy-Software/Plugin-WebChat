@@ -2,7 +2,7 @@
 /*
 Plugin Name: WebChat
 Description: Plugin para configurar a conexão de WebChat na plataforma de atendimento através do painel administrativo do WordPress.
-Version: 1.0.0
+Version: 1.0.2
 Author: Izy Software
 Author URI: https://izysoftware.com
 */
