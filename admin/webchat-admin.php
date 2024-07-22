@@ -15,8 +15,8 @@ class WebChat_Admin
     public static function add_menu()
     {
         add_menu_page(
-            'Configurar WebChat',
-            'Configurar WebChat',
+            'WebChat',
+            'WebChat',
             'manage_options',
             'webchat-config',
             [__CLASS__, 'settings_page'],
