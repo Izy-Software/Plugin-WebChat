@@ -15,8 +15,8 @@ class WebChat_Admin
     public static function add_menu()
     {
         add_menu_page(
-            'WebChat',
-            'WebChat',
+            'Configurar WebChat',
+            'Configurar WebChat',
             'manage_options',
             'webchat-config',
             [__CLASS__, 'settings_page'],
@@ -31,6 +31,7 @@ class WebChat_Admin
         <div class="wrap">
             <h1>Configurar WebChat</h1>
             <p>Por favor, pegue o script com o seu revendedor e cole no campo abaixo:</p>
+            <?php settings_errors(); ?>
             <form method="post" action="options.php">
                 <?php
                 settings_fields('webchat_options_group');
@@ -64,7 +65,11 @@ class WebChat_Admin
 
     public static function register_settings()
     {
-        register_setting('webchat_options_group', 'webchat_script', ['WebChat_Admin', 'update_advanced_fields']);
+        register_setting('webchat_options_group', 'webchat_script', [
+            'sanitize_callback' => [__CLASS__, 'update_advanced_fields'],
+            'type' => 'string',
+            'show_in_rest' => true,
+        ]);
 
         add_settings_section('webchat_section', 'Configurações do WebChat', null, 'webchat-config');
 
@@ -166,6 +171,14 @@ class WebChat_Admin
         if (preg_match('/window\.chatFooterText\s*=\s*[\'"]([^\'"]+)[\'"]/', $script, $matches)) {
             update_option('webchat_footer_text', $matches[1]);
         }
+
+        add_settings_error(
+            'webchat_messages',
+            'webchat_message',
+            __('Configurações salvas.', 'webchat'),
+            'updated'
+        );
+
         return $script;
     }
 }
