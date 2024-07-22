@@ -1,10 +1,4 @@
 <?php
-/*
-Plugin Name: Custom WebChat Config
-Description: Plugin para configurar o WebChat através do painel administrativo do WordPress.
-Version: 1.0
-Author: Seu Nome
-*/
 
 // Prevenir acesso direto
 if (!defined('ABSPATH')) {
@@ -12,8 +6,12 @@ if (!defined('ABSPATH')) {
 }
 
 // Definir constantes
-define('WEBCHAT_PLUGIN_URL', plugin_dir_url(__FILE__));
-define('WEBCHAT_PLUGIN_DIR', plugin_dir_path(__FILE__));
+if (!defined('WEBCHAT_PLUGIN_URL')) {
+    define('WEBCHAT_PLUGIN_URL', plugin_dir_url(__FILE__));
+}
+if (!defined('WEBCHAT_PLUGIN_DIR')) {
+    define('WEBCHAT_PLUGIN_DIR', plugin_dir_path(__FILE__));
+}
 
 // Incluir arquivos necessários
 require_once WEBCHAT_PLUGIN_DIR . 'includes/webchat-scripts.php';
