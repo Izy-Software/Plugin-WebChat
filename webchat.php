@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: WebChat
-Description: Plugin para configurar a conexão de WebChat da plataforma Izy Software através do painel administrativo do WordPress.
-Version: 1.0.1
+Description: Plugin para configurar a conexão de WebChat na plataforma de atendimento através do painel administrativo do WordPress.
+Version: 1.0.0
 Author: Izy Software
 Author URI: https://izysoftware.com
-*/
+*/ß
 
 // Prevenir acesso direto
 if (!defined('ABSPATH')) {
@@ -37,7 +37,7 @@ register_activation_hook(__FILE__, 'webchat_activate');
 function webchat_redirect_after_activation() {
     if (get_option('webchat_plugin_activated', false)) {
         delete_option('webchat_plugin_activated');
-        wp_redirect(admin_url('admin.php?page=webchat-config'));
+        wp_safe_redirect(admin_url('admin.php?page=webchat-config'));
         exit;
     }
 }
