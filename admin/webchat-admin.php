@@ -49,6 +49,8 @@ class WebChat_Admin
                     ?>
                 </form>
             </div>
+            <hr>
+            <a href="https://izysoftware.com" class="button button-primary" target="_blank">Visite a Izy Software</a>
         </div>
         <script>
             document.getElementById('advanced-settings-button').addEventListener('click', function () {
