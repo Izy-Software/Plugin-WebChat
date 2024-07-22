@@ -11,7 +11,7 @@ Este plugin foi criado para facilitar a configuração do WebChat da plataforma 
 
 ### Passo 1: Baixar o Plugin
 
-Baixe o plugin clicando [AQUI](https://github.com/AndrielPrado/Plugin-WebChat/releases/download/v1.0.0/webchat_v1.0.0.zip).
+Baixe o plugin clicando [AQUI](https://github.com/AndrielPrado/Plugin-WebChat/releases/download/v1.0.2/webchat_v1.0.2.zip).
 
 ### Passo 2: Upload para o WordPress
 
